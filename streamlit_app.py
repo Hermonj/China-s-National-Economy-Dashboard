@@ -3,30 +3,35 @@ import pandas as pd
 import numpy as np
 
 st.title("China's National Economy Dashboard")
-st.header("GDP growth, GDP per capita, inflation rate, unemployment rate, and current account balance.")
-st.markdown("The dashboard provides visualizations of key economic indicators for China's national economy. It aims to help users understand the historical trends and current status of the Chinese economy.")
+st.header(
+    "GDP growth, GDP per capita, inflation rate, unemployment rate, and current account balance 202242260041-ROMHA TEKLE."
+)
 
+st.markdown(
+    "The dashboard provides visualizations of key economic indicators for China's national economy. It aims to help users understand the historical trends and current status of the Chinese economy."
+)
 
-dataframe = pd.DataFrame(np.random.randn(10, 20),
-  columns = ('col %d' % i
-    for i in range(20)))
-st.write(dataframe)
+# Read the CSV file
+data = pd.read_csv("Economy_Dashboard2.csv")
 
-st.write('This is a line_chart.')
-st.line_chart(dataframe)
+# Real GDP Growth
+st.write('This is GDP growth.')
+st.line_chart(data["GDP growth"])
 
-st.write('This is a area_chart.')
-st.area_chart(dataframe)
+# Inflation Rate
+st.write('This is GDP per capita.')
+st.area_chart(data["GDP per capita"])
 
-st.write('This is a bar_chart.')
-st.bar_chart(dataframe)
+# Inflation Ratest.bar_chart(data["Inflation rate"])
+st.write('This is GDP, current prices.')
+st.line_chart(data["GDP, current prices"])
 
-st.write('Map data')
-data_of_map = pd.DataFrame(
-  np.random.randn(1000, 2) / [60, 60] + [36.66, -121.6],
-  columns = ['latitude', 'longitude'])
-st.map(data_of_map)
+# Inflation Rate
+st.write('This is GDP based on PPP.')
+st.line_chart(data["GDP based on PPP"])
 
+# Inflation Rate
+st.write('This is Implied PPP conversion rate.')
+st.line_chart(data["Implied PPP conversion rate"])
 
-image = Image.open('picture.jpg')
-st.image(image, caption = 'This is a picture', use_column_width = True)
+#sidebar
