@@ -9,9 +9,7 @@ st.markdown("The dashboard provides visualizations of key economic indicators fo
 # Read the CSV file
 data = pd.read_csv("ChinaNationalEconomyData.csv")
 
-# Create a simple dashboard with basic plots
-st.title("China's National Economy Dashboard")
-st.subheader("Key Economic Indicators")
+
 
 # Real GDP Growth
 st.line_chart(data["Real GDP growth (Annual percent change)"])
