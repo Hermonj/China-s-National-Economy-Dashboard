@@ -6,34 +6,27 @@ st.title("China's National Economy Dashboard")
 st.header("GDP growth, GDP per capita, inflation rate, unemployment rate, and current account balance.")
 st.markdown("The dashboard provides visualizations of key economic indicators for China's national economy. It aims to help users understand the historical trends and current status of the Chinese economy.")
 
-# Read the CSV file
-data = pd.read_csv("ChinaNationalEconomyData.csv")
 
-# Real GDP Growth
-st.line_chart(data["Real GDP growth (Annual percent change)"])
+dataframe = pd.DataFrame(np.random.randn(10, 20),
+  columns = ('col %d' % i
+    for i in range(20)))
+st.write(dataframe)
 
-# GDP per Capita
-st.line_chart(data["GDP per capita, current prices (U.S. dollars per capita)"])
+st.write('This is a line_chart.')
+st.line_chart(dataframe)
 
-# Inflation Rate
-st.line_chart(data["Inflation rate, average consumer prices (Annual percent change)"])
+st.write('This is a area_chart.')
+st.area_chart(dataframe)
 
-# Unemployment Rate
-st.line_chart(data["Unemployment rate (Percent)"])
+st.write('This is a bar_chart.')
+st.bar_chart(dataframe)
 
-# Current Account Balance
-st.line_chart(data["Current account balance U.S. dollars (Billions of U.S. dollars)"])
+st.write('Map data')
+data_of_map = pd.DataFrame(
+  np.random.randn(1000, 2) / [60, 60] + [36.66, -121.6],
+  columns = ['latitude', 'longitude'])
+st.map(data_of_map)
 
-st.subheader("Growth Rates and Financial Metrics")
 
-# 5-year GDP Growth Rate
-st.text(data["5-year GDP growth rate"].mean())
-
-# 5-year Inflation Rate
-st.text(data["5-year Inflation rate"].mean())
-
-# 5-year Unemployment Rate
-st.text(data["5-year Unemployment rate"].mean())
-
-# 5-year Current Account Balance
-st.text(data["5-year Current account balance"].mean())
+image = Image.open('picture.jpg')
+st.image(image, caption = 'This is a picture', use_column_width = True)
