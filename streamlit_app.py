@@ -34,12 +34,38 @@ st.bar_chart(data["GDP based on PPP"])
 st.write('This is Implied PPP conversion rate.')
 st.line_chart(data["Implied PPP conversion rate"])
 
-#sidebar
 
+#sidebar
 with st.sidebar:
     with st.echo():
-        st.write("This code will be printed to the sidebar.")
+        st.write("We are building China-s-National-Economy-Dashboard ")
 
     with st.spinner("Loading..."):
         time.sleep(5)
     st.success("Done!")
+
+
+#columns 01
+col1, col2, col3 = st.columns(3)
+
+with col1:
+   st.header("Trade War")
+   st.image("https://images.pexels.com/photos/4386371/pexels-photo-4386371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+with col2:
+   st.header("National Economy")
+   st.image("https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+with col3:
+   st.header("Stock Exchange")
+   st.image("https://images.pexels.com/photos/745243/pexels-photo-745243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+
+#column 02
+col1, col2 = st.columns([3, 1])
+data = np.random.randn(10, 1)
+
+col1.subheader("A wide column with a national chart")
+col1.line_chart(data)
+
+col2.subheader("A narrow column with the national data")
+col2.write(data)
