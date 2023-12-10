@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+[theme]
+base="dark"
+
 st.title("China's National Economy Dashboard")
 st.header(
     "GDP growth, GDP per capita, inflation rate, unemployment rate, and current account balance 202242260041-ROMHA TEKLE."
