@@ -36,16 +36,6 @@ st.line_chart(data["Implied PPP conversion rate"])
 
 
 #sidebar
-with st.sidebar:
-    with st.echo():
-        st.write("We are building China-s-National-Economy-Dashboard ")
-
-    with st.spinner("Loading..."):
-        time.sleep(5)
-    st.success("Done!")
-
-
-
 
 
 
