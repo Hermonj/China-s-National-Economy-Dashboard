@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-[theme]
-base="dark"
 
 st.title("China's National Economy Dashboard")
 st.header(
