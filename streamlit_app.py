@@ -50,4 +50,11 @@ with st.sidebar:
         ("Standard", "Express")
     )
 
+with st.sidebar:
+    with st.echo():
+        st.write("China-s-National-Economy-Dashboard")
+
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
 
