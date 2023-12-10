@@ -45,20 +45,7 @@ with st.sidebar:
     st.success("Done!")
 
 
-#columns 01
-col1, col2, col3 = st.columns(3)
 
-with col1:
-   st.header("Trade War")
-   st.image("https://images.pexels.com/photos/4386371/pexels-photo-4386371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-
-with col2:
-   st.header("National Economy")
-   st.image("https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-
-with col3:
-   st.header("Stock Exchange")
-   st.image("https://images.pexels.com/photos/745243/pexels-photo-745243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
 
 #column 02
 col1, col2 = st.columns([3, 1])
