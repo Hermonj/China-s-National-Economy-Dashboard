@@ -40,7 +40,7 @@ st.line_chart(data["Implied PPP conversion rate"])
 
 # Using object notation
 add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
+    "How",
     ("Email", "Home phone", "Mobile phone")
 )
 
