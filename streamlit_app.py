@@ -38,7 +38,6 @@ st.line_chart(data["Implied PPP conversion rate"])
 
 #sidebar
 
-
 # Using "with" notation
 with st.sidebar:
     add_radio = st.radio(
