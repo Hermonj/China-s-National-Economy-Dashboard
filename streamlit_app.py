@@ -19,7 +19,7 @@ data = pd.read_csv("Economy_Dashboard2.csv")
 st.write('This is GDP growth.')
 st.line_chart(data["GDP growth"])
 
-# Inflation Rate
+#  GDP per capita
 st.write('This is GDP per capita.')
 st.area_chart(data["GDP per capita"])
 
