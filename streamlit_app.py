@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 st.title("China's National Economy Dashboard")
@@ -25,7 +26,7 @@ st.area_chart(data["GDP per capita"])
 
 # Inflation Ratest.bar_chart(data["Inflation rate"])
 st.write('This is GDP, current prices.')
-st.pydeck_chart(data["GDP, current prices"])
+st.pyplot(data["GDP, current prices"])
 
 # Inflation Rate
 st.write('This is GDP based on PPP.')
