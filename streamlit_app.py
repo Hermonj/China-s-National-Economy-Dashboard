@@ -25,7 +25,7 @@ st.area_chart(data["GDP per capita"])
 
 # Inflation Ratest.bar_chart(data["Inflation rate"])
 st.write('This is GDP, current prices.')
-st.area_chart(data["GDP, current prices"])
+st.pydeck_chart(data["GDP, current prices"])
 
 # Inflation Rate
 st.write('This is GDP based on PPP.')
@@ -33,7 +33,7 @@ st.bar_chart(data["GDP based on PPP"])
 
 # Inflation Rate
 st.write('This is Implied PPP conversion rate.')
-st.line_chart(data["Implied PPP conversion rate"])
+st.scatter_chart(data["Implied PPP conversion rate"])
 
 
 #sidebar
